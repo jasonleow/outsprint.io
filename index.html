@@ -378,7 +378,7 @@ img.emoji {
 							<label for="contact_description">Enter your message here</label>
 						</p>
 						<p class="form-row">
-							<input type="submit" value="Send Message" name="contact_submit" id="contact_submit" class="form-submit">
+							<input type="submit" value="Send Message" name="contact_submit" id="contact_submit" class="form-submit" onclick="clearForm()">
 							<input type="hidden" id="_wpnonce" name="_wpnonce" value="23a84c46c7" /><input type="hidden" name="_wp_http_referer" value="/" />						</p>
 					</form>
 				</div>
@@ -448,11 +448,18 @@ img.emoji {
 
 </div><!-- #page -->
 
+<script>
+function clearForm() {
+  setTimeout(function(){
+	    document.getElementById("myForm").reset();
+	}, 1000);
+}
+</script>
 <script type='text/javascript' src='https://s0.wp.com/wp-content/js/devicepx-jetpack.js?ver=202020'></script>
 <script type='text/javascript' src='/wp-content/themes/meth/assets/js/isotope.pkgd.min.js?ver=2.0.0'></script>
 <script type='text/javascript'>
 /* <![CDATA[ */
-var stag = {"permalink":"https:\/\/outsprint.io\/","ajaxurl":"https:\/\/outsprint.io\/wp-admin\/admin-ajax.php","nextText":"<i class=\"fa fa-chevron-right\"><\/i>","prevText":"<i class=\"fa fa-chevron-left\"><\/i>","sendText":"Sending\u2026","portfolioFilter":"on"};
+var stag = {"permalink":"https:\/\/outsprint.io\/","ajaxurl":"https:\/\/outsprint.io\/wp-admin\/admin-ajax.php","nextText":"<i class=\"fa fa-chevron-right\"><\/i>","prevText":"<i class=\"fa fa-chevron-left\"><\/i>","sendText":"Sent!","portfolioFilter":"on"};
 /* ]]> */
 </script>
 <script type='text/javascript' src='/wp-content/themes/meth/assets/js/jquery.custom.min.js?ver=1.2'></script>
